@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz PlantLovers - Monte seu Kit Verde</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>Monte seu Kit Verde</h1>
+            <p>Responda algumas perguntas para receber sugestões personalizadas</p>
+        </div>
+
+        <div class="quiz-progress">
+            <div class="progress-bar">
+                <div class="progress" id="quiz-progress"></div>
+            </div>
+            <span id="progress-text">Pergunta 1 de 5</span>
+        </div>
+
+        <form id="plant-quiz">
+            <!-- Pergunta 1 -->
+            <div class="quiz-question active" data-question="1">
+                <h2>Qual é o nível de iluminação do seu espaço?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="light" value="high">
+                        <div class="option-content">
+                            <i class="fas fa-sun"></i>
+                            <span>Muita luz natural</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="light" value="medium">
+                        <div class="option-content">
+                            <i class="fas fa-cloud-sun"></i>
+                            <span>Luz moderada</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="light" value="low">
+                        <div class="option-content">
+                            <i class="fas fa-moon"></i>
+                            <span>Pouca luz</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="quiz-question" data-question="2">
+                <h2>Com que frequência você pode regar suas plantas?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="watering" value="frequent">
+                        <div class="option-content">
+                            <i class="fas fa-tint"></i>
+                            <span>Diariamente</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="watering" value="moderate">
+                        <div class="option-content">
+                            <i class="fas fa-tint-slash"></i>
+                            <span>2-3 vezes por semana</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="watering" value="rare">
+                        <div class="option-content">
+                            <i class="fas fa-calendar-week"></i>
+                            <span>1 vez por semana</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="quiz-question" data-question="3">
+                <h2>Qual o tamanho do espaço disponível?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="space" value="large">
+                        <div class="option-content">
+                            <i class="fas fa-expand"></i>
+                            <span>Grande (mais de 2m²)</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="space" value="medium">
+                        <div class="option-content">
+                            <i class="fas fa-square"></i>
+                            <span>Médio (1-2m²)</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="space" value="small">
+                        <div class="option-content">
+                            <i class="fas fa-compress"></i>
+                            <span>Pequeno (menos de 1m²)</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="quiz-question" data-question="4">
+                <h2>Qual seu nível de experiência com plantas?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="experience" value="expert">
+                        <div class="option-content">
+                            <i class="fas fa-seedling"></i>
+                            <span>Experiente</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="experience" value="intermediate">
+                        <div class="option-content">
+                            <i class="fas fa-leaf"></i>
+                            <span>Intermediário</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="experience" value="beginner">
+                        <div class="option-content">
+                            <i class="fas fa-spa"></i>
+                            <span>Iniciante</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="quiz-question" data-question="5">
+                <h2>Qual o objetivo principal com suas plantas?</h2>
+                <div class="options">
+                    <label class="option-card">
+                        <input type="radio" name="purpose" value="decoration">
+                        <div class="option-content">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Decoração</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="purpose" value="air">
+                        <div class="option-content">
+                            <i class="fas fa-wind"></i>
+                            <span>Purificação do ar</span>
+                        </div>
+                    </label>
+                    <label class="option-card">
+                        <input type="radio" name="purpose" value="hobby">
+                        <div class="option-content">
+                            <i class="fas fa-heart"></i>
+                            <span>Hobby</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="quiz-navigation">
+                <button type="button" class="nav-button" id="prev-question" disabled>Anterior</button>
+                <button type="button" class="nav-button" id="next-question">Próxima</button>
+                <button type="submit" class="nav-button submit-button" id="submit-quiz">Finalizar</button>
+            </div>
+        </form>
+
+        <div class="quiz-results" id="quiz-results">
+            <h2>Seu Kit Verde Ideal</h2>
+            <div class="results-container">
+                <!-- Os resultados serão inseridos aqui via JavaScript -->
+            </div>
+            <button class="cta-button" id="restart-quiz">Fazer Novamente</button>
+        </div>
+    </div>
+
+    <script src="../assets/js/quiz.js"></script>
+</body>
+</html> 
